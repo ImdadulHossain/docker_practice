@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: django-web
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: project.settings
+      - key: PORT
+        value: 8000
